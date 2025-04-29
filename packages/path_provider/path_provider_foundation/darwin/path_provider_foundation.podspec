@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
   s.osx.dependency 'FlutterMacOS'
   s.ios.deployment_target = '12.0'
   s.osx.deployment_target = '10.14'
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
   s.ios.xcconfig = {
     'LIBRARY_SEARCH_PATHS' => '$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)/ $(SDKROOT)/usr/lib/swift',
     'LD_RUNPATH_SEARCH_PATHS' => '/usr/lib/swift',
@@ -24,3 +25,4 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
   s.resource_bundles = {'path_provider_foundation_privacy' => ['path_provider_foundation/Sources/path_provider_foundation/Resources/PrivacyInfo.xcprivacy']}
 end
+
