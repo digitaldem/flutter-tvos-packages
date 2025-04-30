@@ -59,7 +59,7 @@ private func fileManagerDirectoryForType(_ type: DirectoryType) -> FileManager.S
   case .downloads:
     #if os(tvOS)
     assertionFailure("Downloads directory is not supported on tvOS.")
-    return .cachesDirectory
+    return .documentDirectory
     #else
     return .downloadsDirectory
     #endif
