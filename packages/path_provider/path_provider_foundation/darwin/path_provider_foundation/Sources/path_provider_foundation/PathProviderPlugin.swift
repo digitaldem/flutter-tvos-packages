@@ -58,7 +58,6 @@ private func fileManagerDirectoryForType(_ type: DirectoryType) -> FileManager.S
     return FileManager.SearchPathDirectory.applicationSupportDirectory
   case .downloads:
     #if os(tvOS)
-    assertionFailure("Downloads directory is not supported on tvOS.")
     return .documentDirectory
     #else
     return .downloadsDirectory
